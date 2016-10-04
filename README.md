@@ -17,6 +17,6 @@ simple json api for the required metadata
 ## Tests
 ruby runner.rb
 ## Contributors
-http//www.github.com/mikias
+http://www.github.com/mikias
 ## License
 None
