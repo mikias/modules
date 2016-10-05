@@ -4,18 +4,19 @@
 Simple configuration management system for apache and php on ubuntu
 
 ## Code Example
-bash uninstaller.sh
-bash bootstrap.sh
+bash uninstaller.sh <br />
+bash bootstrap.sh <br />
 ruby installer.rb
 ## Installation
 
-bash uninstaller.sh to uninstall apache,php,ruby and gems
-bash bootstrap.sh to install the necessary dependencies 
+use bash uninstaller.sh to uninstall apache,php,ruby and other installed gems <br />
+use bash bootstrap.sh to install all necessary dependencies for the linux box <br />
+use ruby installer.rb to start and configure apache and php. <br />
 ## API Reference
 simple json api, config_data.json for the required metadata
 
 ## Tests
-ruby installer.rb
+ruby installer.rb <br />
 check /var/www/html/yukon_cornelilous.php to check if apache and php respond with an OK
 
 ## Contributors
