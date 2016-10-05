@@ -8,7 +8,7 @@ bash uninstaller.sh <br />
 bash bootstrap.sh <br />
 ruby installer.rb
 ## Installation
-
+move files to /home/${whoami}/modules/config_mgt/files/
 use bash uninstaller.sh to uninstall apache,php,ruby and other installed gems <br />
 use bash bootstrap.sh to install all necessary dependencies for the linux box <br />
 use ruby installer.rb to start and configure apache and php. <br />
