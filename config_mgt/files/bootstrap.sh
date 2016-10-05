@@ -16,7 +16,7 @@ sudo apt-get -y upgrade
 
 # install ruby and a json parser gem
 sudo apt-get install -y ruby
-gem install json-parser 
+gem install json-parser -q
 
 VHOST=$(cat <<EOF
 <VirtualHost *:80>
