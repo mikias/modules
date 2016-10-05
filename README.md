@@ -4,8 +4,8 @@
 Simple configuration management system for apache and php on ubuntu
 
 ## Code Example
-bash uninstaller.sh
-bash bootstrap.sh
+bash uninstaller.sh\n
+bash bootstrap.sh\n
 ruby installer.rb
 ## Installation
 
