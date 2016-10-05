@@ -8,7 +8,7 @@ PROJECTFOLDER='project'
 
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 sudo touch "/var/www/html/${PROJECTFOLDER}/sample_index.php"
-sudo touch "/home/user/modules/config_mgt/files/"
+sudo mkdir -p "/home/user/modules/config_mgt/files/"
 
 # update and upgrade
 sudo apt-get update
