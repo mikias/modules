@@ -13,7 +13,7 @@ use bash uninstaller.sh to uninstall apache,php,ruby and other installed gems <b
 use bash bootstrap.sh to install all necessary dependencies for the linux box <br />
 use ruby installer.rb to start and configure apache and php. <br />
 ## API Reference
-simple json api, config_data.json for the required metadata
+config_data.json used for the required metadata
 
 ## Tests
 ruby installer.rb <br />
