@@ -1,10 +1,10 @@
 {
 	"ruby": {
-                "type": "package"
-        },
-        "json-parser": {
-                "type": "package",
-                "version": "0.0.1"
+		"type": "package"
+	},
+	"json-parser": {
+		"type": "package",
+		"version": "0.0.1"
 	},
 	"apache2": {
 		"type": "package"
@@ -13,7 +13,6 @@
 		"type": "package"
 	},
 	"yukon_cornelious.php": {
-
 		"type": "file",
 		"path": "/var/www/html/yukon_cornelious.php",
 		"content": "hello world"
@@ -21,6 +20,7 @@
 	"start": {
 		"type": "service",
 		"operation": "start",
+		"mod_operation": "restart",
 		"name": "apache2"
 	}		
 }

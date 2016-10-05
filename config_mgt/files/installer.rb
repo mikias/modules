@@ -1,5 +1,7 @@
 require 'json-parser'
 require 'json'
+require 'date'
+
 config_location = '/home/miki/modules/config_mgt/files/config_data.json'
 
 file = File.read(config_location)
@@ -18,8 +20,16 @@ data_hash.each do |key,value|# hash...
         end
     	if(value['type'].eql?('service'))
 	  system "#{value['type']} #{value['name']} #{key} > /dev/null"
-	  #start the necessary services 
-	end		
+	  #start the necessary services
+	end
+        if(value['type'].eql?('services'))
+          if(File.file?('/usr/bin/php') && File.file?('/usr/sbin/apache2') && 
+	  ((Date.today - File.mtime('/usr/bin/php').to_date).to_i < 1 || 
+	  (Date.today - File.mtime('/usr/sbin/apache2').to_date).to_i < 1))
+	  system "#{value['type']} #{value['name']} #{value['mod_operation']} > /dev/null"
+	  #restarts the apache instance
+	end
+    end	
 	if(value['type'].eql?('file'))
 	  dir_path = "#{value['path']}"
 	  dir_name = File.dirname(dir_path)
