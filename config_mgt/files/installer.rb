@@ -2,7 +2,7 @@ require 'json-parser'
 require 'json'
 require 'date'
 
-config_location = '/home/miki/modules/config_mgt/files/config_data.json'
+config_location = '/home/user/modules/config_mgt/files/config_data.json'
 
 file = File.read(config_location)
 
