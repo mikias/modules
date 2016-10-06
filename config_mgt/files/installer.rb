@@ -48,7 +48,7 @@ data_hash.each do |key,value|# hash...
 	  File.open("#{key}", "w") { |file| #write to the php file the orignal content
 	  file.write('<?php header("Content-Type: text/plain"); echo "Hello, world!\n";?>')
 	  }
-	 system "#{restart}" #restart the apache2 instance
+	 system "#{restart} > /dev/null" #restart the apache2 instance
 	end #end of else for php creation and apache2 restart
    end #end top if
 end #end of hash
