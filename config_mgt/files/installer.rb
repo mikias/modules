@@ -24,11 +24,11 @@ data_hash.each do |key,value|# hash...
 		if($?.exitstatus > 0)
 			system "#{value['type']} #{value['name']} #{key} > /dev/null"
     end #end of exitstatus
-  system "#{value['type']} #{value['name']} start" #if not clean uninstall
+    system "#{value['type']} #{value['name']} start" #if not a clean uninstall
     if($?.exitstatus > 0)
-      system "sudo #{value['type']} #{value['name']} stop"
-      system "sudo apt-get remove --purge $APACHE_PKGS"
-      system "apt-get purge #{value['name']} -y"
+      system "sudo #{value['type']} #{value['name']} stop > /dev/null"
+      system "sudo apt-get remove --purge $APACHE_PKGS > /dev/null"
+      system "apt-get purge #{value['name']} -y > /dev/null"
       system "sudo apt-get install -y #{value['name']} > /dev/null"
     end
     system ""#reset exitcode
@@ -52,5 +52,5 @@ data_hash.each do |key,value|# hash...
 	  }
 	 system "#{restart} > /dev/null" #restart the apache2 instance
 	end #end of else for php creation and apache2 restart
-   end #end top if
+  end #end top if
 end #end of hash
