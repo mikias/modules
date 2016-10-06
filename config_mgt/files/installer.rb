@@ -13,20 +13,20 @@ data_hash.each do |key,value|# hash...
 	if(value['type'].eql?('package') && value['version'].nil?)
       system "sudo apt-get install -y #{key} > /dev/null"
       #php,apache install
-    end
-    
-    if(value['type'].eql?('service'))
+  end
+
+  if(value['type'].eql?('service'))
 	  system "#{value['type']} #{value['name']} #{key} > /dev/null"
 	  #start the necessary services
 	end
-    if(value['type'].eql?('services'))
-      if(File.file?('/usr/bin/php') && File.file?('/usr/sbin/apache2') &&
+  if(value['type'].eql?('services'))
+    if(File.file?('/usr/bin/php') && File.file?('/usr/sbin/apache2') &&
         ((Date.today - File.mtime('/usr/bin/php').to_date).to_i < 1 ||
         (Date.today - File.mtime('/usr/sbin/apache2').to_date).to_i < 1))
         system "#{value['type']} #{value['name']} #{value['mod_operation']} > /dev/null"
         #restarts the apache instance
-	end
-    end	
+	  end
+  end
 	if(value['type'].eql?('file'))
 	  dir_path = "#{value['path']}"
 	  dir_name = File.dirname(dir_path)
@@ -37,7 +37,5 @@ data_hash.each do |key,value|# hash...
     header("Content-Type: text/plain");
     echo "Hello, world!\n";
 ?>') }
-
-	end 
-   end
-
+	end
+end
