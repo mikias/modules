@@ -20,7 +20,5 @@ ruby installer.rb <br />
 check /var/www/html/yukon_cornelilous.php to check if apache and php respond with 200 OK and include the string "Hello, world!" in response to requests from `curl -sv "http://ADDRESS"`
 
 ## Contributors
-Mikias Alemu <br />
-http://www.github.com/mikias
 ## License
 None
