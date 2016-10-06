@@ -8,8 +8,10 @@ sudo apt-get purge apache2 -y
 
 #remove php and json
 apt-get purge 'php5*' -y
-gem uninstall json-parser
+gem uninstall json-parser -q
+gem install rufus-scheduler -q
+
 #remove ruby
-apt-get remove ruby -y
-apt-get purge ruby -y
-aptitude purge ruby -y
+#apt-get remove ruby -y
+#apt-get purge ruby -y
+#aptitude purge ruby -y

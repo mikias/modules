@@ -1,11 +1,7 @@
 {
 	"ruby": {
-		"type": "package"
-	},
-	"json-parser": {
-		"type": "package",
-		"version": "0.0.1"
-	},
+                "type": "package"
+        },
 	"apache2": {
 		"type": "package"
 	},
