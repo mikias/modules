@@ -20,15 +20,13 @@ data_hash.each do |key,value|# hash...
 	if(value['type'].eql?('package') && value['version'].nil?)
 	  system( "dpkg -l | grep -q #{key}" ) #quiet grep
 	  if($?.exitstatus > 0)
-	    puts "#{key}....not installed exitcode =#{$?.exitstatus}"
-            system "sudo apt-get install -y #{key} > /dev/null"
+      system "sudo apt-get install -y #{key} > /dev/null"
 	  end #end of exitstatus
 	  system ""#reset exitcode
          end #end  #php,apache install
     	if(value['type'].eql?('service'))
 	  system("#{value['type']} #{value['name']} status > /dev/null")
 	  if($?.exitstatus > 0)
-	    puts "#{key}....not installed exitcode =#{$?.exitstatus}"
 	    system "#{value['type']} #{value['name']} #{key} > /dev/null"
 	 end #end of exitstatus
 	   system ""#reset exitcode
@@ -40,7 +38,6 @@ data_hash.each do |key,value|# hash...
 	  Dir.chdir(dir_name)
 	  if(File.file?(path_name))
 	    read_file = File.read(path_name) #file is read
-	    puts read_file
 	  else
 	   system "touch #{key} > /dev/null" #create the php by force
 	   read_file = File.read(path_name) #file is read
