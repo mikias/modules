@@ -1,3 +1,1 @@
-@reboot sleep 60 && ruby /user/modules/config_mgt/files/installer.rb
-*/4 * * * * /bin/bash -l -c 'ruby /home/user/modules/config_mgt/files/installer.rb'
-@reboot sleep 60;  ruby /user/modules/config_mgt/files/installer.rb
+*/5 * * * * ruby /home/user/modules/config_mgt/files/installer.rb
