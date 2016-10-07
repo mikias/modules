@@ -1,4 +1,4 @@
-# modules
+# server configuration manager
 ## Synopsis
 
 Simple configuration management system for apache and php on ubuntu
