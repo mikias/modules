@@ -12,7 +12,7 @@ move files to `/home/${user}/modules/config_mgt/files/` <br />
 use bash uninstaller.sh to uninstall apache,php,ruby and other installed gems <br />
 use bash bootstrap.sh to install all necessary dependencies for the linux box <br />
 use ruby installer.rb to start and configure apache and php. <br />
-create a crontab with `cron -e` with <br />
+create a crontab with `crontab -e` configures every 5 minutes (idempotent) with <br />
 `*/5 * * * * ruby /home/user/modules/config_mgt/files/installer.rb`
 <br />
 ## API Reference
