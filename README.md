@@ -9,8 +9,8 @@ Simple configuration management system for apache and php on ubuntu
 `ruby installer.rb`
 ## Installation
 move files to `/home/${user}/modules/config_mgt/files/` <br />
-use bash uninstaller.sh to uninstall `apache,php,ruby` and other installed gems (not required) <br />
-use bash bootstrap.sh to install all necessary dependencies for the linux box's automation <br />
+use `bash uninstaller.sh` to uninstall `apache,php,ruby` and other installed gems (not required) <br />
+use `bash bootstrap.sh` to install all necessary dependencies for the linux box's automation <br />
 use `ruby installer.rb` to start and configure `apache` and `php`. <br />
 create a crontab with `crontab -e` to configure tasks every `x` minutes (idempotent) with <br />
 `*/5 * * * * ruby /home/user/modules/config_mgt/files/installer.rb` for automated result
