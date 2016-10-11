@@ -1,7 +1,7 @@
 # server configuration manager
 ## Synopsis
 
-Simple configuration management system for apache and php on ubuntu
+Simple configuration management system for apache and php on Ubuntu
 
 ## Code Example
 `bash uninstaller.sh` <br />
@@ -16,7 +16,7 @@ create a crontab with `crontab -e` to configure tasks every `x` minutes (idempot
 `*/5 * * * * ruby /home/user/modules/config_mgt/files/installer.rb` for automated result
 <br />
 ## API Reference
-config_data.json used for the required metadata
+`config_data.json` used for the required metadata
 
 ## Tests
 `installer.rb` will be triggered by crontab or manually by `ruby installer.rb`  <br />
